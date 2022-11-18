@@ -8,6 +8,12 @@ const map = new mapboxgl.Map({
   projection: "globe", // display map as a 3D globe
   minZoom: 10
 });
+
+map.addControl(
+  new mapboxgl.AttributionControl({
+    customAttribution:"By natoqi"
+  })
+)
 // style...
 map.on("style.load", () => {
   map.setFog({}); // enable atmosphere and stars
